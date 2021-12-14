@@ -1,0 +1,19 @@
+@import '../../../../assets/styles/vars';
+
+.post {
+    @include post();
+
+    &:hover {
+        background: $bg-colored-alt;
+    }
+
+    .thumbnail {
+        flex: 1;
+        min-width: 108px; // Magic number: thumb width size returned by Reddit
+    }
+
+    .misc {
+        flex: 5;
+        padding: 0 $padding-standard;
+    }
+}

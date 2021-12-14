@@ -1,0 +1,6 @@
+<nav class="nav">
+    <a class="button" routerLink="/reader">< Back To List</a>
+</nav>
+
+<app-post-details *ngIf="post?.['data']" 
+                  [data]="post?.['data']"></app-post-details>

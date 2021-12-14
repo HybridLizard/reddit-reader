@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/styles/vars';
+
+* {
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	font-weight: 300;
+	box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: $bg-dark;
+}
+
+html, body, h1, div {
+	margin: 0;
+	padding: 0;
+}
+
+a, input, textarea {
+  user-select: none;
+  outline: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+a, a:visited {
+  color: $text-light;
+}
+
+.nav {
+  padding: 0.5rem;
+}
+
+
+.select, .button {
+  display: inline-block;
+  height: 2.2rem;
+  padding: $padding-standard;
+  background: $bg-dark-alt2;
+  border-radius: $radius-standard;
+  border: 1px solid $border-dark;
+  color: $text-light;
+  cursor: pointer;
+
+  &:hover {
+      background: $bg-lighter;
+  }
+}
+
+h3 {
+  margin-top: 0;
+}

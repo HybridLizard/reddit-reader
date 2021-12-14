@@ -1,0 +1,22 @@
+$bg-dark: #2a2b34;
+$bg-dark-alt: #222;
+$bg-dark-alt2: #333;
+$bg-lighter: #666;
+$bg-colored: #1d242a;
+$bg-colored-alt: #33404b;
+$border-dark: #000;
+$text-light: #ccc;
+
+$padding-standard: 0.5rem;
+$radius-standard: 3px;
+
+@mixin post {
+    display: flex;
+    margin: $padding-standard;
+    padding: $padding-standard;
+    background: $bg-colored;
+    border: 1px solid $border-dark;
+    border-radius: $radius-standard;
+    color: $text-light;
+    text-decoration: none;
+}

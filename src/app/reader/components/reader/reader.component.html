@@ -1,0 +1,13 @@
+<nav class="nav">
+    <select class="select limit"
+            (change)="changeLimit($event)" 
+            [value]="defaultLimit">
+        <option *ngFor="let o of limitOptions">{{ o }}</option>
+    </select>
+    <button class="button button-prev"
+            (click)="loadPrevious()">< Prev</button>
+    <button class="button button-next"
+            (click)="loadNext()">Next ></button>
+</nav>
+
+<app-list [posts]="posts?.data?.children ?? []"></app-list>

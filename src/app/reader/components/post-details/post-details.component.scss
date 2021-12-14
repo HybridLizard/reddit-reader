@@ -1,0 +1,23 @@
+@import '../../../../assets/styles/vars';
+
+:host {
+    @include post();
+
+    flex-direction: column;
+}
+
+.misc {
+    color: $text-light;
+}
+
+.content {
+    color: $text-light;
+}
+
+.thumbnail {
+    margin-top: 1rem;
+    
+    img {
+        width: 100%;
+    }
+}

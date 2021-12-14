@@ -103,9 +103,52 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "reddit-reader:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "reddit-reader:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "reddit-reader:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "reddit-reader:serve:production"
+            }
+          }
         }
       }
     }
   },
-  "defaultProject": "reddit-reader"
+  "defaultProject": "reddit-reader",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
